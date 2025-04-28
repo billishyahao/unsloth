@@ -507,6 +507,25 @@ cu126-ampere-torch260 = [
     "unsloth[cu126onlytorch260]",
     "unsloth[flashattention]",
 ]
+rocmonlytorch270 = [
+    "packaging",
+    "ninja",
+    # Use these lines if ROCm-specific xformers wheels are available
+    "xformers>=0.0.30 ; python_version>='3.9' and platform_system == 'Linux'",
+]
+rocm-torch270 = [
+    "unsloth[huggingface]",
+    "bitsandbytes>=0.45.1",
+    "unsloth[rocmonlytorch270]",
+]
+rocm-mi-torch270 = [
+    "unsloth[huggingface]",
+    "bitsandbytes>=0.45.1",
+    "unsloth[rocmonlytorch270]",
+    "packaging ; platform_system == 'Linux'",
+    "ninja ; platform_system == 'Linux'",
+    "flash-attn>=2.6.3 ; platform_system == 'Linux'",
+]
 
 [project.urls]
 homepage = "http://www.unsloth.ai"
