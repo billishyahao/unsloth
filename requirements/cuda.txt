@@ -1,0 +1,7 @@
+# Common dependencies
+-r common.txt
+
+torch==2.7.0
+torchaudio==2.7.0
+torchvision==0.22.0 
+xformers==0.0.30
